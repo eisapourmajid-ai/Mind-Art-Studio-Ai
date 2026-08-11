@@ -81,12 +81,18 @@
   <div class="dlcard">
     <div class="fname">MindArtStudioAI.zip</div>
     <div class="fmeta">۱۳ فایل · ۳۰۲ کیلوبایت فشرده · ۹۰۰ کیلوبایت بازشده</div>
-    <a class="btn" href="MindArtStudioAI.zip" download>
+    <a class="btn" id="dlbtn" href="MindArtStudioAI.zip" download
+       target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z"/></svg>
       دانلود بستهٔ کامل
     </a>
     <div class="linkline">
-      لینک مستقیم: <a href="MindArtStudioAI.zip" download>MindArtStudioAI.zip</a>
+      اگر دکمه کار نکرد، این لینک را در تب جدید باز کنید:<br />
+      <a id="abs" href="MindArtStudioAI.zip" target="_blank" rel="noopener">MindArtStudioAI.zip</a>
+    </div>
+    <div class="linkline" id="framewarn" style="display:none">
+      <span style="color:var(--amber)">این صفحه داخل قاب پیش‌نمایش باز است.</span>
+      دکمه، دانلود را در تب جدید آغاز می‌کند.
     </div>
   </div>
 
@@ -123,5 +129,30 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  // Absolute URL so the link works when the page is embedded in a preview iframe.
+  var url = new URL("MindArtStudioAI.zip", window.location.href).href;
+  var abs = document.getElementById("abs");
+  abs.href = url;
+  abs.textContent = url;
+
+  var btn = document.getElementById("dlbtn");
+  btn.href = url;
+
+  // Inside a cross-origin iframe the `download` attribute is ignored, so the
+  // request must leave the frame. The server sends Content-Disposition:
+  // attachment, which makes the new tab download and close instead of navigate.
+  var framed = false;
+  try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  if (framed) {
+    document.getElementById("framewarn").style.display = "block";
+    btn.removeAttribute("download");
+  } else {
+    btn.removeAttribute("target");
+  }
+})();
+</script>
 </body>
 </html>
