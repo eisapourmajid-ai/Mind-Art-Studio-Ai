@@ -516,6 +516,9 @@ Recurring visual defects observed across projects, with their cause and the prev
 | 2026-08-11 | 01_CORE.md | 16.02, 35.79 | Relabelled MA24 file-naming examples as Example Reference Only | Prevent an illustrative project code being treated as a declared studio convention | Majid — DR-13 |
 | 2026-08-11 | 00_IDENTITY.md | 04.04 | Added Studio Identity Database (04.04.01-04.04.08): Studio Profile, Scale, Service Architecture, Design Specialization, Geographic Identity, Declared Philosophy, Declared Language, Behavior Under Undefined Identity | Give identity a data structure; every field ships as Undefined rather than assumed | Majid — Data Foundation Build M01 |
 | 2026-08-11 | 00_IDENTITY.md | 07.06 | Added Visual Identity Data Records: Typography Record, Brand Color Record | Register typography and brand colour as pending studio decisions, not invented values | Majid — Data Foundation Build M06 |
+| 2026-08-11 | 00_IDENTITY.md | 09–16 | Added Studio Reality Layer: 09 Studio Reality Profile, 10 Design Intelligence, 11 Material DNA, 12 Visualization DNA, 13 Presentation DNA, 14 Decision Personality, 15 Learning Memory, 16 Identity Governance. Consolidated 04.04 and 07.06 into 09 and 13, retaining both as pointers | Extend identity with the studio's ground-truth reality layer without rewriting Sections 01–08; remove record duplication | Majid — Identity Data Extension v1.0 · Core Systemic Update |
+| 2026-08-11 | 01_CORE.md | 41 | Added Operational Decision Engine: source authority order, conflict protocol, architectural priority matrix, minimum option rule, design review protocol, observation/interpretation separation, confidence axes, realism priority, benchmark scoring, material decision engine, cost rule, decision record, assumption register, escalation, anti-generic rule, completion criteria, failure modes | Add the decision-resolution layer as an extension; renumbered from Majid's proposed 36 because 36 is occupied by the Iranian Regulatory Intelligence Engine | Majid — Operational Decision Engine v2.0 · Core Systemic Update |
+| 2026-08-11 | 02_LIBRARY.md | 11–23 | Added Sections 11 Typology, 12 Site and Orientation, 13 Cost, 14 Client, 15 Software and Tool, 16 AI Production, 17 Sustainability, 18 Project Lesson, 19 Presentation and Publication, 20 Competition, 21 Studio Practice, 22 Knowledge Gap Register, 23 Knowledge Integrity Rules | Extend the existing knowledge architecture rather than replacing it; Majid's proposed 00–32 renumbering was rejected because Sections 03, 04 and 05 carry 18 inbound references | Majid — Library Intelligence Expansion v2.0 · Core Systemic Update |
 | 2026-08-11 | 02_LIBRARY.md | 06, 07 | Added Local Context Intelligence Database (four Mazandaran locations registered empty) and Material Intelligence Database with admission gate | Structure for context and material knowledge, with provenance required before use | Majid — Data Foundation Build M02, M03 |
 | 2026-08-11 | 02_LIBRARY.md | 08, 09, 10 | Added Regulation/Dimension/Benchmark Databases, Visualization Knowledge Database with numeric lighting profiles and capability-based tool records, and Failure Knowledge Database | Satisfy 01_CORE.md 40.07 reference; enforce versioned regulations, paired benchmarks, numeric lighting, and tool-as-capability | Majid — Data Foundation Build M04, M05, M07, M08, M09, M11 |
 | 2026-08-11 | INTAKE_LOG.md, docs/DEVELOPMENT_GOVERNANCE.md, LICENSE | ALL | Refreshed intake log as a placement ledger, published governance documentation, added MIT LICENSE file | Correct three stale or missing repository facts | Majid — DR-27 |
@@ -963,3 +966,476 @@ A failure record does not become a rule by existing. Promotion requires:
 4. Majid approves it through the workflow in `01_CORE.md` Section 12.
 
 Until all four conditions are met, `Future_Rule` remains a proposal and the system does not act on it as policy.
+
+---
+
+## 11 — Typology Intelligence
+
+> What the studio has learned about building types. Each record is generalizable knowledge extracted from projects, never a description of one project.
+
+### 11.01 — Typology Record Schema
+
+```yaml
+TYPOLOGY_RECORD:
+  Typology_ID:            TYP-NNN
+  Name:
+  Typical_Program:
+  Critical_Dimensions:
+  Common_Constraints:
+  Frequent_Mistakes:
+  Success_Factors:
+  Regulatory_Sensitivities:
+  Source:
+  Verification_Status:
+  Confidence:
+  Record_State:
+```
+
+### 11.02 — Typology Register
+
+*(Empty. Records are admitted only from completed studio projects or named professional sources.)*
+
+| Typology ID | Name | Verification | Confidence |
+|-------------|------|--------------|------------|
+| — | — | — | — |
+
+### 11.03 — Admission Rule
+
+A typology record requires evidence from at least two projects, or one named professional source. A single project produces a project lesson in Section 04, not a typology rule.
+
+---
+
+## 12 — Site and Orientation Intelligence
+
+> Generalizable site reasoning. Specific locations belong to Section 06.
+
+### 12.01 — Site Analysis Record Schema
+
+```yaml
+SITE_PATTERN:
+  Pattern_ID:             SITE-NNN
+  Condition:
+  Implication:
+  Design_Response:
+  Evidence:
+  Source:
+  Verification_Status:
+  Confidence:
+  Record_State:
+```
+
+### 12.02 — Orientation Principles
+
+*(Empty. No orientation rule is recorded without a climate source and a named region; a general rule stated without those is an assumption.)*
+
+### 12.03 — Boundary With Section 06
+
+| Question | Section |
+|----------|---------|
+| What is true of this specific city or site? | 06 |
+| What is true of this *kind* of site condition? | 12 |
+
+---
+
+## 13 — Cost Intelligence
+
+> Cost knowledge with mandatory provenance. Governed by `01_CORE.md` 41.12.
+
+### 13.01 — Cost Record Schema
+
+```yaml
+COST_RECORD:
+  Cost_ID:                COST-NNN
+  Item:
+  Scope:
+  Unit:
+  Amount:
+  Currency:
+  Location:
+  Date:
+  Source:
+  Verification_Status:
+  Confidence:
+  Expiry:
+  Record_State:
+```
+
+### 13.02 — Mandatory Fields
+
+`Location` · `Date` · `Scope` · `Source`. A record missing any of the four cannot be admitted and cannot be quoted.
+
+### 13.03 — Expiry Rule
+
+Cost data carries an expiry date. Past expiry the record moves to `ARCHIVED` and may be cited only as historical context, never as a current price. In a high-inflation economy an unexpired date is the only thing separating a price from a fiction.
+
+### 13.04 — Cost Register
+
+*(Empty. No price is recorded from memory, estimate, or inference.)*
+
+---
+
+## 14 — Client Intelligence
+
+> Patterns in client behavior, recorded without identifying anyone. Confidential client information is explicitly outside this file's responsibility.
+
+### 14.01 — Client Pattern Schema
+
+```yaml
+CLIENT_PATTERN:
+  Pattern_ID:             CLI-NNN
+  Observed_Behavior:
+  Typical_Context:
+  Studio_Response:
+  Outcome:
+  Source:
+  Verification_Status:
+  Record_State:
+```
+
+### 14.02 — Confidentiality Rule
+
+No client name, no project address, no contract term, no fee, and no private communication is stored in this file. A pattern is recorded only in a form that cannot be traced to an individual client.
+
+### 14.03 — Client Pattern Register
+
+*(Empty.)*
+
+---
+
+## 15 — Software and Tool Intelligence
+
+> Tools are recorded as tested capabilities with versions, never as identity. Governed by `01_CORE.md` 40.06.
+
+### 15.01 — Tool Record Schema
+
+```yaml
+TOOL_RECORD:
+  Tool_ID:                TOOL-NNN
+  Name:
+  Version:
+  Category:
+  Purpose:
+  Tested:
+  Test_Date:
+  Strengths:
+  Limitations:
+  Studio_Status:
+  Record_State:
+```
+
+**`Studio_Status`:** `Approved` · `Under Evaluation` · `Rejected` · `Deprecated`
+
+### 15.02 — Tool Is Not Identity
+
+The studio's identity records a *capability*, not a product: `Preferred Renderer: Physical path traced renderer`, plus the currently approved tool and version. A renderer name is never written as the studio's identity, because replacing the tool would then require changing who the studio is.
+
+### 15.03 — No Untested Tool Rule
+
+No AI tool, plugin, or renderer is recorded as approved without the studio having tested it. A tool's marketing claim is not evidence, and a tool that performs well in a demonstration has not been tested.
+
+### 15.04 — Tool Register
+
+*(Empty.)*
+
+---
+
+## 16 — AI Production Intelligence
+
+> What the studio has learned about using AI in architectural production. This is knowledge about the method, not instructions to the system — the operating rules are in `01_CORE.md` Section 39.
+
+### 16.01 — AI Behavior Pattern Schema
+
+```yaml
+AI_PATTERN:
+  Pattern_ID:             AIP-NNN
+  Observed_Behavior:
+  Trigger:
+  Consequence:
+  Mitigation:
+  Enforcing_Control:
+  Source:
+  Verification_Status:
+  Record_State:
+```
+
+### 16.02 — Known AI Failure Tendencies
+
+Recorded as observed knowledge. The controls that prevent them live in `01_CORE.md` Section 39; this register explains *why* those controls exist.
+
+| Tendency | Consequence | Enforcing control |
+|----------|-------------|-------------------|
+| Treating an edit as an invitation to redesign | Geometry silently changes | 39.03 |
+| Smoothing detail to increase apparent quality | Material and edge information lost | 39.17 |
+| Importing form language from a reference | Design contaminated by precedent | 39.14 |
+| Improving what was not requested | Scope creep in production | 39.04 |
+
+### 16.03 — Prompt Knowledge Rule
+
+A prompt that produced a good result once is an observation. It becomes studio knowledge only when it reproduces across projects. Prompt records carry the tool and version they were tested against, because a prompt is not portable between models.
+
+---
+
+## 17 — Sustainability Intelligence
+
+> Environmental knowledge with sources. No performance figure is recorded without one.
+
+### 17.01 — Sustainability Record Schema
+
+```yaml
+SUSTAINABILITY_RECORD:
+  Record_ID:              SUS-NNN
+  Topic:
+  Claim:
+  Metric:
+  Value:
+  Measurement_Standard:
+  Climate_Zone:
+  Source:
+  Verification_Status:
+  Confidence:
+  Record_State:
+```
+
+### 17.02 — No Unsourced Performance Claim
+
+U-values, energy figures, embodied carbon, and payback periods require a named standard and a source. A number that circulates widely is not thereby verified, and a manufacturer's figure is recorded as a manufacturer's figure.
+
+### 17.03 — Sustainability Register
+
+*(Empty.)*
+
+---
+
+## 18 — Project Lesson Intelligence
+
+> The canonical learning schema for the system. Section 04.04 holds the operating lesson database; this section defines the structure and the promotion path that governs it.
+
+### 18.01 — Lesson Record Schema
+
+```yaml
+LESSON:
+  Lesson_ID:              LES-NNN
+  Project:
+  Observation:
+  Problem:
+  Decision:
+  Result:
+  Lesson:
+  Future_Rule:
+  Scope:
+  Source:
+  Verification_Status:
+  Record_State:
+```
+
+### 18.02 — Scope Classification
+
+| Scope | Meaning | Destination |
+|-------|---------|-------------|
+| `Project Specific` | True for this project only | Project record; never generalized |
+| `Studio Practice` | The studio's habitual method | Section 21 |
+| `Core Systemic` | Changes how the system reasons | Proposal to `01_CORE.md`, requires approval |
+
+### 18.03 — Future Rule Is a Proposal
+
+The `Future_Rule` field is a candidate, never an active rule. It becomes operative only when written into `01_CORE.md` with Majid's approval. A rule that exists only in a lesson record has not been adopted, and the system must not behave as though it has.
+
+### 18.04 — Promotion Gate
+
+A lesson is promoted to a rule when all four hold:
+
+```text
+01. The pattern has repeated, or Majid has confirmed the reasoning independently
+02. The rule is generalizable beyond the originating project
+03. It does not contradict an existing rule
+04. Majid has approved it explicitly
+```
+
+---
+
+## 19 — Presentation and Publication Intelligence
+
+> What the studio has learned about presenting work. Execution standards are in `01_CORE.md` Section 35.
+
+### 19.01 — Presentation Pattern Schema
+
+```yaml
+PRESENTATION_PATTERN:
+  Pattern_ID:             PRE-NNN
+  Context:
+  Approach:
+  Audience_Response:
+  Effectiveness:
+  Source:
+  Verification_Status:
+  Record_State:
+```
+
+### 19.02 — Narrative Structure
+
+The studio's presentation narrative, recorded from `00_IDENTITY.md` 07.04:
+
+```text
+Problem → Idea → Process → Solution → Experience
+```
+
+This is recorded here as an observed studio method. It is applied as a standard through `01_CORE.md` Section 35.
+
+### 19.03 — Publication Register
+
+*(Empty. A published or submitted project is recorded with its venue, date, and outcome — including rejections, which carry more information than acceptances.)*
+
+---
+
+## 20 — Competition and Opportunity Intelligence
+
+### 20.01 — Competition Record Schema
+
+```yaml
+COMPETITION_RECORD:
+  Record_ID:              COMP-NNN
+  Name:
+  Organizer:
+  Type:
+  Scale:
+  Outcome:
+  Lessons:
+  Rights_Status:
+  Source:
+  Verification_Status:
+  Record_State:
+```
+
+### 20.02 — Rights and Legal Status
+
+No competition, benchmark, or reference project is recorded without its rights status. An image the studio cannot legally reproduce is not an asset, and discovering that after publication is expensive.
+
+### 20.03 — Competition Register
+
+*(Empty.)*
+
+---
+
+## 21 — Studio Practice Register
+
+> Habitual studio methods that are not yet system rules. The waiting room between a preference and a standard.
+
+### 21.01 — Practice Record Schema
+
+```yaml
+PRACTICE:
+  Practice_ID:            PRA-NNN
+  Description:
+  Origin:
+  Frequency:
+  Rationale:
+  Promotion_Candidate:
+  Record_State:
+```
+
+### 21.02 — Practice Is Not Rule
+
+A practice recorded here describes what the studio *tends to do*. It does not bind the system. Applying a practice as if it were a rule is a violation of `01_CORE.md` 40.01, which requires Source, Reason, and Approval for every permanent rule.
+
+### 21.03 — Practice Register
+
+*(Empty.)*
+
+---
+
+## 22 — Knowledge Gap Register
+
+> An explicit record of what the system does not know. A named gap is safer than an unnoticed one.
+
+### 22.01 — Gap Record Schema
+
+```yaml
+KNOWLEDGE_GAP:
+  Gap_ID:                 GAP-NNN
+  Domain:
+  Missing_Knowledge:
+  Impact:
+  Blocks:
+  Resolution_Path:
+  Priority:
+  Record_State:
+```
+
+### 22.02 — Open Gaps
+
+Derived from the current state of the knowledge base. Each blocks a capability the system must not claim.
+
+| Gap ID | Domain | Missing knowledge | Blocks |
+|--------|--------|-------------------|--------|
+| GAP-001 | Studio identity | All fields in `00_IDENTITY.md` Section 09 | Any studio-specific statement |
+| GAP-002 | Visual identity | Typeface and brand colour values | Reproducible presentation output |
+| GAP-003 | Local context | Climate and site data for the four target cities | Context-specific design reasoning |
+| GAP-004 | Regulation | The 22 Mabahes of the Iranian National Building Regulations | Any compliance statement |
+| GAP-005 | Material | The material register is empty | Evidence-based material selection |
+| GAP-006 | Benchmark | No benchmark records in any of the eight categories | Comparative quality assessment |
+| GAP-007 | Cost | No cost records | Any price indication |
+
+### 22.03 — Gap Honesty Rule
+
+While a gap is open, the system states the limitation rather than working around it. Filling a gap with a plausible answer converts a known unknown into an unknown error, which is strictly worse.
+
+---
+
+## 23 — Knowledge Integrity Rules
+
+> The governing constraints for everything in this file. Where this section and a record disagree, this section governs.
+
+### 23.01 — The Golden Rule
+
+```text
+Never store preference as fact.
+Never store example as standard.
+Never store assumption as knowledge.
+Every permanent rule must have Source + Reason + Approval.
+```
+
+### 23.02 — Never Guess to Fill the Library
+
+The following are prohibited as library entries under all circumstances:
+
+- An assumed font name
+- An assumed HEX value
+- An assumed regulation edition or year
+- An assumed price
+- An assumed product or manufacturer
+- A climate figure without a source
+- A benchmark without its legal and rights status
+- An AI tool the studio has not tested
+- A material chosen from render appearance alone
+- A reference chosen only because it is beautiful
+
+An empty field is a valid state. A fabricated field is a defect that propagates.
+
+### 23.03 — Library Non-Responsibilities
+
+This file does **not** contain:
+
+- Main behavioral instructions
+- System personality
+- Routing logic
+- Permission logic
+- The main workflow
+- Decisions about a current project
+- Confidential client information
+- Unverified assumptions presented as fact
+
+Behavioral instruction lives in `PROJECT_INSTRUCTIONS.md`; reasoning lives in `01_CORE.md`; identity lives in `00_IDENTITY.md`.
+
+### 23.04 — Deactivation, Not Deletion
+
+`REJECTED` and `SUPERSEDED` records are retained and deactivated. A rejected record is not an available option and a superseded record is not active knowledge, unless Majid explicitly reactivates it. Retention prevents a rejected idea from being rediscovered and proposed again as if it were new.
+
+### 23.05 — Verification and Confidence
+
+Every record carries both `Verification_Status` and `Confidence`, per `01_CORE.md` 41.08. They are independent. A record may be `ASSUMED` with `HIGH` confidence, and it is still an assumption.
+
+### 23.06 — Maturity Honesty
+
+The knowledge maturity of this file is assessed against `01_CORE.md` 40.10: `K0 Generic` · `K1 Identified` · `K2 Contextual` · `K3 Operational`.
+
+**Current assessment: K1 for most domains, K0 for location, material, cost, and benchmark.** The schemas exist; the knowledge does not yet. The system must represent itself at its actual maturity level and not at the level its structure implies.

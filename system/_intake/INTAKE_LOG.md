@@ -62,6 +62,9 @@ Where each data module landed. This is the authoritative map from dictated modul
 | M11 | Failure knowledge | `02_LIBRARY.md` 10 · 04.06 | Structure built, 1 record |
 | M12 | Knowledge governance | `01_CORE.md` 40 | Complete |
 | M13 | Change record | `01_CORE.md` 40.08 · `02_LIBRARY.md` 05 | Complete |
+| M09 | Studio Reality Layer — reality profile, design intelligence, material/visualization/presentation DNA, decision personality, learning memory, identity governance | `00_IDENTITY.md` 09–16 | Structure built; 10.01, 10.03, 11.01, 12.02, 14.01 carry verified values, remainder `Undefined` |
+| M10 | Operational Decision Engine — priority, options, review, conflict, escalation | `01_CORE.md` 41 | Written in full as 41.01–41.19; renumbered from proposed 36 |
+| M11 | Library Intelligence Expansion — 13 new knowledge domains | `02_LIBRARY.md` 11–23 | Schemas built, registers empty pending real data; 22.02 records 7 open gaps |
 
 ---
 
