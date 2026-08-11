@@ -1,15 +1,15 @@
 # AI Architecture Studio Director — Full Core Bundle
 
-**Generated:** 2026-08-11 · **Branch:** arena/019ff0ad-mind-art-studio-ai
+**Generated:** 2026-08-11 · **Branch:** arena/019ff0ad-mind-art-studio-ai · **Status:** Approved by Majid
 
 This bundle concatenates the four governing files in load order. It is a generated artifact; the files under `system/` remain the source of truth.
 
 | File | Sections | Size |
 |------|----------|------|
-| `PROJECT_INSTRUCTIONS.md` | 10 | 7996 chars |
-| `00_IDENTITY.md` | 16 | 42085 chars |
-| `01_CORE.md` | 41 | 273690 chars |
-| `02_LIBRARY.md` | 24 | 98432 chars |
+| `PROJECT_INSTRUCTIONS.md` | 10 | 7,996 chars |
+| `00_IDENTITY.md` | 16 | 43,435 chars |
+| `01_CORE.md` | 41 | 275,226 chars |
+| `02_LIBRARY.md` | 24 | 98,501 chars |
 
 ---
 
@@ -1377,6 +1377,39 @@ IDENTITY_UPDATE:
 | `Confirmed` | Approved by Majid as studio identity |
 | `Frozen` | Confirmed and closed to routine revision; changing it requires an explicit identity decision |
 | `Rejected` | Considered and declined; retained so it is not reproposed |
+
+**Registered updates**
+
+```yaml
+IDENTITY_UPDATE:
+  Update_ID:        IU-001
+  Data:             Studio Reality Layer - Sections 09-16
+  Target_Section:   09, 10, 11, 12, 13, 14, 15, 16
+  Source:           Majid - Identity Data Extension v1.0
+  Reason:           Separate ground-truth studio facts from philosophy and persona
+  Long_Term_Value:  Gives the decision engine a single canonical identity source
+  Conflicts_With:   Former records at 04.04 and 07.06 - resolved by consolidation, both retained as pointers
+  Approval:         Majid, explicit
+  Status:           Confirmed
+  Date:             2026-08-11
+```
+
+```yaml
+IDENTITY_UPDATE:
+  Update_ID:        IU-002
+  Data:             Design Priority weighting (10.01), Rejected Pattern FORM-001 (10.03),
+                    Material Identity (11.01), Visual Failure positions (12.02), Decision Model (14.01)
+  Target_Section:   10.01, 10.03, 11.01, 12.02, 14.01
+  Source:           Majid - Identity Data Extension v1.0
+  Reason:           First verified values admitted to the identity data layer
+  Long_Term_Value:  Converts stated preference into checkable studio position
+  Conflicts_With:   None
+  Approval:         Majid, explicit
+  Status:           Confirmed
+  Date:             2026-08-11
+```
+
+All other fields in Sections 09-16 remain `Undefined` and are not covered by these records.
 
 ### 16.02 — Identity Change Authority
 
@@ -8890,6 +8923,44 @@ SYSTEM_CHANGE:
   Status:         Proposed / Approved / Applied / Reverted
 ```
 
+**Registered changes**
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-001
+  Date:           2026-08-11
+  Requested_By:   Majid — Identity Data Extension v1.0
+  Reason:         Give the studio a ground-truth reality layer distinct from philosophy and persona
+  Affected_File:  00_IDENTITY.md Sections 09-16; 04.04 and 07.06 converted to pointers
+  Impact:         Identity data has one canonical location; no value changed, all fields remain Undefined
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-002
+  Date:           2026-08-11
+  Requested_By:   Majid — Operational Decision Engine v2.0
+  Reason:         Resolve competing defensible answers with a declared priority and option discipline
+  Affected_File:  01_CORE.md Section 41 (41.01-41.19); 40.03 annotated with the extended state model
+  Impact:         Single-option proposals, uncriticised reviews, and merged conflicts become detectable failures E1-E11
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-003
+  Date:           2026-08-11
+  Requested_By:   Majid — Library Intelligence Expansion v2.0
+  Reason:         Extend the knowledge architecture across thirteen further domains without renumbering referenced sections
+  Affected_File:  02_LIBRARY.md Sections 11-23
+  Impact:         Schemas admitted; registers remain empty pending verified data; seven knowledge gaps registered at 22.02
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
 ### 40.09 — File Responsibility Boundary
 
 ```
@@ -9740,12 +9811,12 @@ Recurring visual defects observed across projects, with their cause and the prev
 | 2026-08-11 | 01_CORE.md | 16.02, 35.79 | Relabelled MA24 file-naming examples as Example Reference Only | Prevent an illustrative project code being treated as a declared studio convention | Majid — DR-13 |
 | 2026-08-11 | 00_IDENTITY.md | 04.04 | Added Studio Identity Database (04.04.01-04.04.08): Studio Profile, Scale, Service Architecture, Design Specialization, Geographic Identity, Declared Philosophy, Declared Language, Behavior Under Undefined Identity | Give identity a data structure; every field ships as Undefined rather than assumed | Majid — Data Foundation Build M01 |
 | 2026-08-11 | 00_IDENTITY.md | 07.06 | Added Visual Identity Data Records: Typography Record, Brand Color Record | Register typography and brand colour as pending studio decisions, not invented values | Majid — Data Foundation Build M06 |
-| 2026-08-11 | 00_IDENTITY.md | 09–16 | Added Studio Reality Layer: 09 Studio Reality Profile, 10 Design Intelligence, 11 Material DNA, 12 Visualization DNA, 13 Presentation DNA, 14 Decision Personality, 15 Learning Memory, 16 Identity Governance. Consolidated 04.04 and 07.06 into 09 and 13, retaining both as pointers | Extend identity with the studio's ground-truth reality layer without rewriting Sections 01–08; remove record duplication | Majid — Identity Data Extension v1.0 · Core Systemic Update |
-| 2026-08-11 | 01_CORE.md | 41 | Added Operational Decision Engine: source authority order, conflict protocol, architectural priority matrix, minimum option rule, design review protocol, observation/interpretation separation, confidence axes, realism priority, benchmark scoring, material decision engine, cost rule, decision record, assumption register, escalation, anti-generic rule, completion criteria, failure modes | Add the decision-resolution layer as an extension; renumbered from Majid's proposed 36 because 36 is occupied by the Iranian Regulatory Intelligence Engine | Majid — Operational Decision Engine v2.0 · Core Systemic Update |
-| 2026-08-11 | 02_LIBRARY.md | 11–23 | Added Sections 11 Typology, 12 Site and Orientation, 13 Cost, 14 Client, 15 Software and Tool, 16 AI Production, 17 Sustainability, 18 Project Lesson, 19 Presentation and Publication, 20 Competition, 21 Studio Practice, 22 Knowledge Gap Register, 23 Knowledge Integrity Rules | Extend the existing knowledge architecture rather than replacing it; Majid's proposed 00–32 renumbering was rejected because Sections 03, 04 and 05 carry 18 inbound references | Majid — Library Intelligence Expansion v2.0 · Core Systemic Update |
 | 2026-08-11 | 02_LIBRARY.md | 06, 07 | Added Local Context Intelligence Database (four Mazandaran locations registered empty) and Material Intelligence Database with admission gate | Structure for context and material knowledge, with provenance required before use | Majid — Data Foundation Build M02, M03 |
 | 2026-08-11 | 02_LIBRARY.md | 08, 09, 10 | Added Regulation/Dimension/Benchmark Databases, Visualization Knowledge Database with numeric lighting profiles and capability-based tool records, and Failure Knowledge Database | Satisfy 01_CORE.md 40.07 reference; enforce versioned regulations, paired benchmarks, numeric lighting, and tool-as-capability | Majid — Data Foundation Build M04, M05, M07, M08, M09, M11 |
 | 2026-08-11 | INTAKE_LOG.md, docs/DEVELOPMENT_GOVERNANCE.md, LICENSE | ALL | Refreshed intake log as a placement ledger, published governance documentation, added MIT LICENSE file | Correct three stale or missing repository facts | Majid — DR-27 |
+| 2026-08-11 | 00_IDENTITY.md | 09–16 | Added Studio Reality Layer: 09 Studio Reality Profile, 10 Design Intelligence, 11 Material DNA, 12 Visualization DNA, 13 Presentation DNA, 14 Decision Personality, 15 Learning Memory, 16 Identity Governance. Consolidated 04.04 and 07.06 into 09 and 13, retaining both as pointers | Extend identity with the studio's ground-truth reality layer without rewriting Sections 01–08; remove record duplication | Majid — Identity Data Extension v1.0 · Core Systemic Update · Approved 2026-08-11. |
+| 2026-08-11 | 01_CORE.md | 41 | Added Operational Decision Engine: source authority order, conflict protocol, architectural priority matrix, minimum option rule, design review protocol, observation/interpretation separation, confidence axes, realism priority, benchmark scoring, material decision engine, cost rule, decision record, assumption register, escalation, anti-generic rule, completion criteria, failure modes | Add the decision-resolution layer as an extension; renumbered from Majid's proposed 36 because 36 is occupied by the Iranian Regulatory Intelligence Engine | Majid — Operational Decision Engine v2.0 · Core Systemic Update · Approved 2026-08-11. |
+| 2026-08-11 | 02_LIBRARY.md | 11–23 | Added Sections 11 Typology, 12 Site and Orientation, 13 Cost, 14 Client, 15 Software and Tool, 16 AI Production, 17 Sustainability, 18 Project Lesson, 19 Presentation and Publication, 20 Competition, 21 Studio Practice, 22 Knowledge Gap Register, 23 Knowledge Integrity Rules | Extend the existing knowledge architecture rather than replacing it; Majid's proposed 00–32 renumbering was rejected because Sections 03, 04 and 05 carry 18 inbound references | Majid — Library Intelligence Expansion v2.0 · Core Systemic Update · Approved 2026-08-11. |
 
 ---
 

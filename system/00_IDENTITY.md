@@ -1212,6 +1212,39 @@ IDENTITY_UPDATE:
 | `Frozen` | Confirmed and closed to routine revision; changing it requires an explicit identity decision |
 | `Rejected` | Considered and declined; retained so it is not reproposed |
 
+**Registered updates**
+
+```yaml
+IDENTITY_UPDATE:
+  Update_ID:        IU-001
+  Data:             Studio Reality Layer - Sections 09-16
+  Target_Section:   09, 10, 11, 12, 13, 14, 15, 16
+  Source:           Majid - Identity Data Extension v1.0
+  Reason:           Separate ground-truth studio facts from philosophy and persona
+  Long_Term_Value:  Gives the decision engine a single canonical identity source
+  Conflicts_With:   Former records at 04.04 and 07.06 - resolved by consolidation, both retained as pointers
+  Approval:         Majid, explicit
+  Status:           Confirmed
+  Date:             2026-08-11
+```
+
+```yaml
+IDENTITY_UPDATE:
+  Update_ID:        IU-002
+  Data:             Design Priority weighting (10.01), Rejected Pattern FORM-001 (10.03),
+                    Material Identity (11.01), Visual Failure positions (12.02), Decision Model (14.01)
+  Target_Section:   10.01, 10.03, 11.01, 12.02, 14.01
+  Source:           Majid - Identity Data Extension v1.0
+  Reason:           First verified values admitted to the identity data layer
+  Long_Term_Value:  Converts stated preference into checkable studio position
+  Conflicts_With:   None
+  Approval:         Majid, explicit
+  Status:           Confirmed
+  Date:             2026-08-11
+```
+
+All other fields in Sections 09-16 remain `Undefined` and are not covered by these records.
+
 ### 16.02 — Identity Change Authority
 
 Modifying this file requires Majid's **explicit** approval, per `01_CORE.md` 12.01. Identity is the one layer where silence is never consent. A value may not enter this file because it seems obvious, because it appeared in a conversation, or because another section implies it.

@@ -7485,6 +7485,44 @@ SYSTEM_CHANGE:
   Status:         Proposed / Approved / Applied / Reverted
 ```
 
+**Registered changes**
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-001
+  Date:           2026-08-11
+  Requested_By:   Majid — Identity Data Extension v1.0
+  Reason:         Give the studio a ground-truth reality layer distinct from philosophy and persona
+  Affected_File:  00_IDENTITY.md Sections 09-16; 04.04 and 07.06 converted to pointers
+  Impact:         Identity data has one canonical location; no value changed, all fields remain Undefined
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-002
+  Date:           2026-08-11
+  Requested_By:   Majid — Operational Decision Engine v2.0
+  Reason:         Resolve competing defensible answers with a declared priority and option discipline
+  Affected_File:  01_CORE.md Section 41 (41.01-41.19); 40.03 annotated with the extended state model
+  Impact:         Single-option proposals, uncriticised reviews, and merged conflicts become detectable failures E1-E11
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      SC-003
+  Date:           2026-08-11
+  Requested_By:   Majid — Library Intelligence Expansion v2.0
+  Reason:         Extend the knowledge architecture across thirteen further domains without renumbering referenced sections
+  Affected_File:  02_LIBRARY.md Sections 11-23
+  Impact:         Schemas admitted; registers remain empty pending verified data; seven knowledge gaps registered at 22.02
+  Approval:       Majid, explicit
+  Status:         Applied
+```
+
 ### 40.09 — File Responsibility Boundary
 
 ```
