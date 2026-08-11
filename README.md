@@ -14,6 +14,7 @@ system/
 │   └── UPDATE_PROPOSAL_TEMPLATE.md    # Required format for every proposed change
 ├── _intake/
 │   └── INTAKE_LOG.md                  # Verbatim buffer for incoming PARTS (temporary)
+├── PROJECT_INSTRUCTIONS.md            # Master operating instruction (max 8000 chars)
 ├── 00_IDENTITY.md                     # WHO the studio is
 ├── 01_CORE.md                         # HOW the system thinks
 └── 02_LIBRARY.md                      # WHAT the system has learned
