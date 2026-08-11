@@ -370,6 +370,54 @@ Store only generalized knowledge extracted from completed projects. Keep project
 
 Every entry must state source level, confidence, applicable project type, transfer limitation, and its operational destination: `Core Rule`, `Library Knowledge`, `Project Memory Only`, or `Benchmark / Reference Only`.
 
+### 04.05 — System Improvement Note Register
+
+Every major failure produces a System Improvement Note, as required by `01_CORE.md` Section 39.19. This register stores the notes; it does not store the rules themselves. A note that is classified `Core systemic` becomes a rule only after it is written into `01_CORE.md` and recorded in Section 05 of this file.
+
+```text
+SYSTEM IMPROVEMENT NOTE
+Note ID:         [SIN-000]
+Date:            [YYYY-MM-DD]
+Observed failure:[What happened]
+Failure code:    [P0-P6 per 01_CORE.md 39.18]
+Root cause:      [Why it happened]
+Classification:  [Project specific / Core systemic]
+Proposed change: [Rule, checklist, or default to modify]
+Destination:     [Project Memory Only / Core Rule / Library Knowledge]
+Status:          [Open / Approved / Implemented / Rejected]
+```
+
+**Classification rule:** only failures classified `Core systemic` may modify permanent behavior. A `Project specific` note stays in the project record and never changes a core default.
+
+| Note ID | Observed Failure | Code | Classification | Destination | Status |
+|---------|------------------|------|----------------|-------------|--------|
+| SIN-001 | AI regenerated the building instead of applying the requested facade change | P0 | Core systemic | Core Rule — 01_CORE.md 39.03 | Implemented |
+| SIN-002 | Previously generated image was treated as project truth in a later operation | P0 | Core systemic | Core Rule — 01_CORE.md 39.01 | Implemented |
+| SIN-003 | Rejected reference reappeared in a later prompt compilation | P2 | Core systemic | Core Rule — 01_CORE.md 39.14 | Implemented |
+| SIN-004 | Camera and framing drifted during an enhancement operation | P3 | Core systemic | Core Rule — 01_CORE.md 39.13 | Implemented |
+| SIN-005 | Cinematic grading replaced architectural photographic realism | P4 | Core systemic | Core Rule — 01_CORE.md 39.07, 39.11 | Implemented |
+| SIN-006 | An edit request was escalated into a presentation board | P6 | Core systemic | Core Rule — 01_CORE.md 39.06 | Implemented |
+
+### 04.06 — Visual Failure Pattern Archive
+
+Recurring visual defects observed across projects, with their cause and the preventive control. This archive is diagnostic knowledge, not an operating rule; the rules live in `01_CORE.md` Section 39.
+
+| Pattern | Symptom | Root Cause | Preventive Control |
+|---------|---------|------------|--------------------|
+| Silent redesign | Output building differs from the source volume | "Edit" interpreted as "redesign" | 39.03 Source-Locked Architectural Edit Mode |
+| Geometry drift | Floor count, opening pattern, or proportion changed | No geometry lock recorded before production | 39.05 Geometry Integrity Lock |
+| Scope creep | Elements outside the request were "improved" | No authorized delta defined | 39.04 Authorized Delta Register |
+| Reference contamination | Form or facade elements transferred from a reference | Reference used without classification | 39.14 Reference Control System |
+| Zombie reference | A rejected reference influences later output | Superseded status not enforced | 39.14 Superseded status |
+| Camera drift | Perspective, height, or crop changed | Camera treated as an aesthetic variable | 39.13 Camera Integrity System |
+| Cinematic overreach | Orange grading, blown highlights, crushed shadows | Cinematic priority over architectural realism | 39.07, 39.11 |
+| Material falseness | Plastic gloss, fake luxury sheen, oversaturated texture | Material chosen for effect, not physical logic | 39.08 Material Realism System |
+| Dirty glazing | Cloudy, milky, or blue-tinted glass | No glass quality default | 39.09 Glass Quality Standard |
+| Black foliage | Vegetation crushed to dark mass, architecture unreadable | Over-processed landscape and HDR darkness | 39.10 Vegetation and Environment Quality |
+| Lighting inheritance | Warm materials produced warm lighting without instruction | Lighting derived from material names | 39.12 Lighting State Control |
+| Output escalation | Concept request returned as a finished board | Output type inferred from previous context | 39.06 Visual Output Classification |
+| Memory-driven prompt | Prompt built from conversation, not project state | No structured prompt compilation | 39.15 Prompt Compilation Engine |
+
 ---
 
 ## 05 — Improvements History
@@ -458,3 +506,7 @@ Every entry must state source level, confidence, applicable project type, transf
 | 2026-08-05 | 01_CORE.md, 02_LIBRARY.md | Operational Contract Expansion | Expanded the integrated control chain, phase transitions, freeze change requests, classification execution, coordination hand-off, feedback transfer, and lesson-transfer tests with Trigger/Input/Output/Approval/Next-State relationships | Convert framework headings into executable cross-system contracts | Majid — Expand Previous Systems and Correct Relationships |
 | 2026-08-05 | PROJECT_INSTRUCTIONS.md, 01_CORE.md, 02_LIBRARY.md, README.md | Command Intent & Visual Handshake | Added command intent lexicon, textual operation direction, explicit production handshake, output-permission QA, visual operation handshake, and command validation examples | Prevent image/render/sheet escalation from analysis or design discussion | Majid — Explicit Command Behavior Requirement |
 | 2026-08-11 | 01_CORE.md | Sections 01–38 (full file) | Populated the complete Intelligence Layer: thinking framework, decision engine, cognitive pipeline, project execution, intelligence architecture, communication, specialist system, quality control, knowledge evolution, governance, lifecycle, business, technical, digital workflow, presentation, project memory, AI generative design, documentation, material/cost, planning, landscape, interior, visualization, BIM, operating protocol, workspace, enhanced QC/business/evolution, startup, overlap resolution, maturity, visual identity (35.00–35.100), Iranian regulation, business intelligence, client communication | Complete the three-layer permanent intelligence architecture and resolve all forward references from 00_IDENTITY.md and 02_LIBRARY.md | Majid — 01 CORE full dictation |
+| 2026-08-11 | 01_CORE.md | 39 | Added Core Evolution Patch v2.0: Visual Fidelity, Source Lock, Edit Integrity and Rendering Quality System (39.00-39.20) | Prevent redesign-on-edit, reference contamination, and cinematic drift across all projects | Majid — Core Evolution Patch v2.0 |
+| 2026-08-11 | 00_IDENTITY.md | 04.03 | Added Foundational Operating Principles: Source Truth, Architectural Partner, Precision First | Identity-level anchor for the Core Evolution Patch | Majid — Core Evolution Patch v2.0 |
+| 2026-08-11 | 02_LIBRARY.md | 04.05, 04.06 | Added System Improvement Note Register and Visual Failure Pattern Archive | Store failure patterns and improvement notes as knowledge, not as operating rules | Majid — Core Evolution Patch v2.0 |
+| 2026-08-11 | PROJECT_INSTRUCTIONS.md | 01-10 | Restructured from instruction list to Project Operating Contract with 10 numbered modules: State Initialization, Source Authority, Decision State, Workflow Routing, Visual Task Contract, Edit Preservation, Output Permission, Quality Gate, Memory Update | Enforce state, lock, delta, and validation before any output reaches the Core | Majid — PROJECT_INSTRUCTIONS v2.0 |

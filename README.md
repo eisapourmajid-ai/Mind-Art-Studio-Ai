@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/version-v1.1.0--local-0066cc?style=for-the-badge&logo=semver&logoColor=white" />
-  <img src="https://img.shields.io/badge/sections-38-00994d?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/sections-39-00994d?style=for-the-badge" />
   <img src="https://img.shields.io/badge/specialists-12-996600?style=for-the-badge" />
   <img src="https://img.shields.io/badge/NBRI-22%20Mabahes%20%2B%202%20Modules-cc0000?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-666666?style=for-the-badge" />
@@ -37,6 +37,7 @@
 | ویژگی | توضیحات |
 |-------|---------|
 | 🧠 **موتور تفکر معماری** | چارچوب تعریف مسئله، تحلیل ۷ بعدی، استدلال طراحی |
+| 🔒 **قفل منبع و یکپارچگی ادیت** | سلسله‌مراتب حقیقت، Geometry Lock، Authorized Delta، طبقه‌بندی خطای P0–P6 |
 | ⚡ **خط لوله شناختی** | فرآیند استدلال ساختارمند ۱۶ مرحله‌ای |
 | 🏗️ **۱۲ متخصص مجازی** | تیم چندتخصصی با قوانین فعال‌سازی هوشمند |
 | 📊 **سیستم کیفیت AQS** | ماتریس ارزیابی ۷ معیاری + ۶ دروازه کیفیت |
@@ -57,7 +58,7 @@
 ├──────────────────────────────────────────────┤
 │                                              │
 │  📄 Total Lines ............. ~11,900        │
-│  📑 CORE Sections .......... 38              │
+│  📑 CORE Sections .......... 39              │
 │  👥 Specialists ............ 12              │
 │  🔢 Project States ......... 11              │
 │  📊 Quality Criteria (AQS) .. 7              │
@@ -86,6 +87,7 @@ The **AI Architecture Studio Director** is a comprehensive architectural intelli
 | Feature | Description |
 |---------|-------------|
 | 🧠 **Architectural Thinking Engine** | Problem definition, 7-dimension analysis, design reasoning |
+| 🔒 **Source Lock & Edit Integrity** | Truth hierarchy, geometry lock, authorized delta, P0-P6 failure codes |
 | ⚡ **Cognitive Pipeline** | 16-stage structured reasoning process |
 | 🏗️ **12 Virtual Specialists** | Multidisciplinary team with intelligent activation rules |
 | 📊 **AQS Quality System** | 7-criteria evaluation matrix + 6 quality gates |
@@ -158,13 +160,13 @@ docs/DEVELOPMENT_GOVERNANCE.md
 ```
 Core-Development-Environment/
 │
-├── PROJECT_INSTRUCTIONS.md          ← Operational control (56 lines)
-│   • Language protocol
-│   • Instruction priority
-│   • Workflow (11 stages)
-│   • Decision modes (4 modes)
-│   • Quality standards
-│   • System feedback loop
+├── PROJECT_INSTRUCTIONS.md          ← Project Operating Contract (10 modules)
+│   • Language & priority
+│   • Project state initialization
+│   • Source authority & decision state
+│   • Workflow routing (11 stages, 4 decision modes)
+│   • Visual task contract & edit preservation
+│   • Output permission, quality gate, memory update
 │
 ├── 00_IDENTITY.md                   ← Studio identity (~600 lines)
 │   • Design philosophy (7 principles)
@@ -182,7 +184,7 @@ Core-Development-Environment/
 │   • 15-19: Technical, Digital, Visual, Memory, AI
 │   • 20-26: Documentation, Materials, Planning, BIM
 │   • 27-32: Protocol, Workspace, Extensions, Startup
-│   • 33-38: Maturity, Visual ID, Regulations, Business, Client
+│   • 33-39: Maturity, Visual ID, Regulations, Business, Client, Visual Fidelity
 │
 ├── 02_LIBRARY.md                    ← Accumulated knowledge, source registry & output matrix (~450 lines)
 │   • Permanent knowledge
@@ -230,7 +232,7 @@ cat docs/DEVELOPMENT_GOVERNANCE.md   # How this core is audited and developed?
 
 ---
 
-## 🧠 CORE.md — 38 Sections Overview
+## 🧠 CORE.md — 39 Sections Overview
 
 <details>
 <summary><strong>📋 Click to expand full section list</strong></summary>
@@ -275,6 +277,7 @@ cat docs/DEVELOPMENT_GOVERNANCE.md   # How this core is audited and developed?
 | 36 | Regulatory Intelligence | 22 official Mabahes + 2 supplementary modules, decision hierarchy, design checkpoints |
 | 37 | Business Intelligence | Pricing engine, negotiation, financial learning |
 | 38 | Client Communication | Two-layer model, 6 modes, 4 client types, WhatsApp intelligence |
+| 39 | Visual Fidelity & Edit Integrity | Source truth hierarchy, source-locked edit mode, authorized delta, geometry lock, realism standard, failure codes P0-P6 |
 
 </details>
 
