@@ -27,7 +27,15 @@ system/
 
 ## Current state
 
-The three core files exist as empty structures. Content is being dictated by Majid
-item by item; each item is inserted into its target section exactly as given.
-Full system analysis (classification review, contradiction detection, optimization)
-runs afterwards.
+All three core files are populated.
+
+| File | State | Structure |
+|---|---|---|
+| `PROJECT_INSTRUCTIONS.md` | Final | Master operating directive, within the 8000-character limit |
+| `00_IDENTITY.md` | Populated | Sections 01–08 — purpose, mission, vision, identity, architectural identity, persona, visual identity, signature |
+| `01_CORE.md` | Populated | Sections 01–38 — thinking, decision engine, execution, specialists, quality, knowledge, governance, lifecycle, technical, visual identity (35.00–35.100), regulation, business, client communication |
+| `02_LIBRARY.md` | Populated | Sections 00–05 — admission model, permanent knowledge, technical knowledge, trends, project learnings, improvements history |
+
+Content was dictated by Majid item by item and inserted into its target section exactly
+as given. Full system analysis — classification review, contradiction detection,
+structural optimization — runs on this populated baseline.
