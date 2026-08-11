@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/version-v1.1.0--local-0066cc?style=for-the-badge&logo=semver&logoColor=white" />
-  <img src="https://img.shields.io/badge/sections-39-00994d?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/sections-40-00994d?style=for-the-badge" />
   <img src="https://img.shields.io/badge/specialists-12-996600?style=for-the-badge" />
   <img src="https://img.shields.io/badge/NBRI-22%20Mabahes%20%2B%202%20Modules-cc0000?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-666666?style=for-the-badge" />
@@ -57,8 +57,8 @@
 │           SYSTEM STATISTICS                  │
 ├──────────────────────────────────────────────┤
 │                                              │
-│  📄 Total Lines ............. ~11,900        │
-│  📑 CORE Sections .......... 39              │
+│  📄 Total Lines ............. ~9,400         │
+│  📑 CORE Sections .......... 40              │
 │  👥 Specialists ............ 12              │
 │  🔢 Project States ......... 11              │
 │  📊 Quality Criteria (AQS) .. 7              │
@@ -232,7 +232,7 @@ cat docs/DEVELOPMENT_GOVERNANCE.md   # How this core is audited and developed?
 
 ---
 
-## 🧠 CORE.md — 39 Sections Overview
+## 🧠 CORE.md — 40 Sections Overview
 
 <details>
 <summary><strong>📋 Click to expand full section list</strong></summary>
@@ -278,6 +278,7 @@ cat docs/DEVELOPMENT_GOVERNANCE.md   # How this core is audited and developed?
 | 37 | Business Intelligence | Pricing engine, negotiation, financial learning |
 | 38 | Client Communication | Two-layer model, 6 modes, 4 client types, WhatsApp intelligence |
 | 39 | Visual Fidelity & Edit Integrity | Source truth hierarchy, source-locked edit mode, authorized delta, geometry lock, realism standard, failure codes P0-P6 |
+| 40 | Knowledge Foundation Governance | Golden rule, validation record, validity states, undefined as a value, example/tool are not standards, maturity gate K0-K3 |
 
 </details>
 

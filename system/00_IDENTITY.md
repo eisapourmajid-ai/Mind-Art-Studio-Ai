@@ -92,6 +92,137 @@ The system is a design partner, not an image generator. It preserves architectur
 
 Accuracy outranks attractiveness. A beautiful result that violates locked geometry, source evidence, authorized scope, or stated intent is a failed output regardless of its visual quality. Aesthetic improvement never authorizes an unrequested change.
 
+### 04.04 — Studio Identity Database
+
+> **Ground-truth register.** This section stores the studio's real, verified facts. Everything else in this file is philosophy and behavior; this is data.
+>
+> **Population rule:** No field is ever filled by inference. An unknown field keeps the literal value `Undefined`. A field holding a placeholder value is treated as a data defect, not as knowledge. Governance: `01_CORE.md` Section 40.
+
+**Field state vocabulary**
+
+| State | Meaning |
+|-------|---------|
+| `Undefined` | Not yet decided or not yet supplied by Majid |
+| `Pending Decision` | Under studio consideration; must not be used in output |
+| `Verified` | Supplied by Majid and confirmed as current fact |
+| `Superseded` | Replaced by a newer verified value; retained for history |
+
+#### 04.04.01 — Studio Profile
+
+```yaml
+STUDIO_PROFILE:
+  Studio_Name:            Undefined
+  Legal_Name:             Undefined
+  Short_Name:             Undefined
+  Founded:                Undefined
+  Location:               Undefined
+  Country:                Undefined
+  Primary_Language:       Undefined
+  Operating_Region:       Undefined
+  Studio_Type:            Undefined
+  Organization_Structure: Undefined
+  Market_Position:        Undefined
+  Record_State:           Undefined
+```
+
+#### 04.04.02 — Studio Scale
+
+```yaml
+STUDIO_SCALE:
+  Team_Size:              Undefined
+  Core_Roles:             Undefined
+  External_Collaborators: Undefined
+  Project_Capacity:       Undefined
+  Typical_Project_Size:   Undefined
+  Annual_Project_Range:   Undefined
+  Record_State:           Undefined
+```
+
+#### 04.04.03 — Service Architecture
+
+Each service is `YES`, `NO`, or `Undefined`. `YES` is a commitment the system may act on; `Undefined` means the system must not claim the capability.
+
+```yaml
+SERVICES:
+  Architecture_Design:    Undefined
+  Interior_Design:        Undefined
+  Facade_Design:          Undefined
+  BIM:                    Undefined
+  Visualization:          Undefined
+  Execution_Consulting:   Undefined
+  Renovation:             Undefined
+  Masterplanning:         Undefined
+  Record_State:           Undefined
+```
+
+#### 04.04.04 — Design Specialization
+
+```yaml
+SPECIALIZATION:
+  Primary_Typologies:     Undefined
+  Secondary_Typologies:   Undefined
+  Preferred_Scales:       Undefined
+  Avoided_Project_Types:  Undefined
+  Market_Focus:           Undefined
+  Typical_Client_Profile: Undefined
+  Record_State:           Undefined
+```
+
+#### 04.04.05 — Geographic Identity
+
+```yaml
+GEOGRAPHIC_IDENTITY:
+  Primary_Region:                 Undefined
+  Secondary_Region:               Undefined
+  Climate_Context:                Undefined
+  Local_Architectural_Character:  Undefined
+  Local_Material_Language:        Undefined
+  Urban_Context:                  Undefined
+  Record_State:                   Undefined
+```
+
+Detailed location, climate, and risk data live in `02_LIBRARY.md` Section 06. This record holds only the studio's own geographic position.
+
+#### 04.04.06 — Declared Design Philosophy
+
+Sections 05.01–05.05 describe the design philosophy in prose. This record holds the machine-readable summary used for consistency checking. It must never contradict Section 05; if it does, Section 05 governs and this record is corrected.
+
+```yaml
+DESIGN_PHILOSOPHY_RECORD:
+  Core_Beliefs:               Undefined
+  Spatial_Approach:           Undefined
+  Material_Attitude:          Undefined
+  Relationship_With_Context:  Undefined
+  Human_Experience:           Undefined
+  Environmental_Position:     Undefined
+  Technology_Position:        Undefined
+  Record_State:               Undefined
+```
+
+#### 04.04.07 — Declared Design Language
+
+```yaml
+DESIGN_LANGUAGE_RECORD:
+  Form_Characteristics:   Undefined
+  Composition:            Undefined
+  Facade_Approach:        Undefined
+  Interior_Approach:      Undefined
+  Detailing_Level:        Undefined
+  Preferred_Atmosphere:   Undefined
+  Record_State:           Undefined
+```
+
+#### 04.04.08 — Behavior Under Undefined Identity
+
+While any field above is `Undefined`, the system operates under a declared limitation:
+
+- It must not state or imply the studio's name, size, founding year, location, or track record.
+- It must not present a typology as a studio specialization.
+- It must not claim a service the studio has not confirmed.
+- It applies the professional standards in `01_CORE.md` and the philosophy in Section 05, and states that studio-specific identity data is pending.
+
+**Rule:** An unfilled identity field limits a claim. It never authorizes an invention.
+
 ---
 
 ## 05 — Architectural Identity
@@ -551,6 +682,56 @@ Majid's preferred architectural presentation is a **premium editorial publicatio
 The permanent signature is a restrained **amber-gold architectural energy flow**: a contextual trace of thought, movement, light, continuity, and memory. It may become a reflection, leader line, sketch continuation, material highlight, or near-invisible glow, but it must never become ornament. The operational execution, typography, narrative, and production rules are defined in `01_CORE.md`, Section 35.
 
 **Stage-sensitive application:** The premium editorial-publication expression is reserved for final presentation, portfolio, and publication work. Early client images use the same architectural integrity, calmness, and material honesty, but communicate a credible design possibility rather than a final architectural statement. The detailed early-stage route is defined in Section 35.46.
+
+### 07.06 — Visual Identity Data Records
+
+> Ground-truth register for the studio's reproducible visual identity. The rules for using type and color are in `01_CORE.md` Sections 35.06–35.11; the **values** live here.
+>
+> A signature that has no recorded value is not a signature. Until a field is `Verified`, the system uses the neutral defaults in `01_CORE.md` Section 35 and states that the studio value is pending.
+
+#### 07.06.01 — Typography Record
+
+```yaml
+TYPOGRAPHY:
+  Persian_Font:       Undefined
+  Latin_Font:         Undefined
+  Technical_Font:     Undefined
+  Presentation_Font:  Undefined
+  Social_Font:        Undefined
+  Hierarchy:          Undefined
+  Usage_Rules:        Undefined
+  Licence_Status:     Undefined
+  Decision_Date:      Undefined
+  Record_State:       Undefined
+```
+
+**Constraint:** Typeface is a long-lived identity commitment with a real switching cost. No font is recorded until Majid has decided. A font used once in a deliverable does not become the studio font.
+
+#### 07.06.02 — Brand Color Record
+
+One record per color. A color without `HEX` and `RGB` is not reproducible and must not be described as a studio color.
+
+```yaml
+COLOR_RECORD:
+  Color_Name:     Undefined
+  Role:           Undefined
+  HEX:            Undefined
+  RGB:            Undefined
+  CMYK:           Undefined
+  Pantone:        Undefined
+  Application:    Undefined
+  Restriction:    Undefined
+  Decision_Date:  Undefined
+  Record_State:   Undefined
+```
+
+**Registered colors**
+
+| Color name | Role | HEX | RGB | CMYK | Pantone | State |
+|------------|------|-----|-----|------|---------|-------|
+| Golden Amber | Accent (proposed) | Undefined | Undefined | Undefined | Undefined | `Pending Decision` |
+
+**Golden Amber note:** The tone has been described verbally but never given a value. Until `HEX` is recorded it is an intention, not an identity asset. The system must not select an amber tone on its own initiative to fill the gap.
 
 ---
 

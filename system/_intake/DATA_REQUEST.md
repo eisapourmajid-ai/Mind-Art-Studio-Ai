@@ -262,6 +262,8 @@ Year:
 
 ### DR-13 · Project Code Convention and Active Project List
 
+**PARTIALLY RESOLVED:** `MA24` occurrences in `01_CORE.md` 16.02 and 35.79 are now labelled `Example Reference Only`, so the system cannot read them as a declared convention. The real project code convention and active project list are still required.
+
 **Destination:** `01_CORE.md` → 16.04, 35.80 · `01_CORE.md` → 28.04
 **State:** GENERIC — the examples use `MA24`, which is illustrative, not a declared convention. No project is registered.
 
@@ -448,19 +450,27 @@ Portfolio format:              [PDF / Print / Web]
 
 ## TIER D — Governance Decisions (no external data required)
 
+> **All four items in this tier are RESOLVED and applied.** Retained as a decision record.
+
 ### DR-24 · Section 10.21–10.23 vs Section 39
 
 **Decision needed:** keep `01_CORE.md` 10.21 Source Fidelity Principle, 10.22 Geometry Lock Register, and 10.23 Design Drift Detection as the quality-gate expression of Section 39, or merge them into 39 and leave cross-references in Section 10.
 **Recommendation:** keep them. Deleting them breaks the Quality Gate chain. Section 39.00 already declares authority.
+
+**RESOLVED — Majid:** keep both chains independent. Applied.
 
 ### DR-25 · PROJECT_INSTRUCTIONS Character Budget
 
 **Decision needed:** the file is at 7,996 of 8,000 characters. Any future addition requires removing something first.
 **Recommendation:** declare a fixed migration rule — new operational rules go to `01_CORE.md`; `PROJECT_INSTRUCTIONS.md` changes only when a routing behavior changes.
 
+**RESOLVED — Majid:** `PROJECT_INSTRUCTIONS.md` is scoped to Routing + Behavior + Permission only. All new rules go to `01_CORE.md`. Applied in v3.0 and recorded in `01_CORE.md` 40.09 and `docs/DEVELOPMENT_GOVERNANCE.md` 03.
+
 ### DR-26 · Persian Strings Inside Core Files
 
 **Decision needed:** `01_CORE.md` 08.05, 13.16, 15.04, 15.16 and `02_LIBRARY.md` 03.13 retain Persian text (command examples and local terms). Keep verbatim, or translate with the Persian original in parentheses.
+
+**RESOLVED — Majid:** bilingual labels permitted — English heading with a Persian gloss in parentheses. Persian command examples are Majid's literal input strings under test and are retained verbatim as data. Rule written into `01_CORE.md` 12.09.
 
 ### DR-27 · Missing Repository Files
 
@@ -472,6 +482,15 @@ LICENSE                          — README states MIT, no file exists
 system/_intake/INTAKE_LOG.md     — stale: reports "PARTS received: 0" and "Core files created: No"
 02_LIBRARY.md Section 05         — four rows dated 2026-08-04 carry "—" in the Reason column
 ```
+
+**RESOLVED — Majid:** all three files created or refreshed; MIT confirmed.
+
+| Item | State |
+|------|-------|
+| `docs/DEVELOPMENT_GOVERNANCE.md` | Created — 13 sections, summarizes `01_CORE.md` 12 and 40 |
+| `LICENSE` | Created — MIT, Copyright (c) 2026 Majid Eisapour |
+| `system/_intake/INTAKE_LOG.md` | Rewritten as a placement ledger with the M01–M13 destination map |
+| `02_LIBRARY.md` Section 05 `—` rows | Open — the four 2026-08-04 rows still need a Reason from Majid |
 
 ---
 

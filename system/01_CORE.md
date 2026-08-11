@@ -3707,6 +3707,17 @@ Section numbers are structural, not decorative. When content is relocated, it is
 | Client deliverables | As required by the client |
 | Prompts and technical instructions | English |
 
+**Bilingual heading rule.** System files remain English. Where an English term names a governing concept whose Persian equivalent Majid uses in conversation, the section heading may carry the Persian term in parentheses on the following line:
+
+```
+Source Fidelity
+(وفاداری به منبع)
+```
+
+This applies to headings and defined terms only. Body text, tables, schemas, and rules remain English. A Persian gloss is a reading aid, never a second definition; if the two ever diverge, the English text governs.
+
+**Existing Persian content.** Persian command examples in `02_LIBRARY.md` 03.13, `01_CORE.md` 08.05, and `PROJECT_INSTRUCTIONS.md` are Majid's literal input strings under test. They are data, not prose, and are retained verbatim.
+
 ### 12.10 — Documentation of Decisions
 
 Any decision that will affect future work must be recorded. An unrecorded decision will be re-debated.
@@ -4063,6 +4074,8 @@ Tools serve the design. The workflow must reduce repetition, protect data integr
 | AI visualization | Approved AI image tools |
 | Coordination | Shared model and clash review |
 
+This table states tool **roles**, not a tool commitment. Per 40.06, the standard is the required capability and output quality; the tool is the current means. The studio's confirmed tools and versions are recorded as capability records in `02_LIBRARY.md` 09.04–09.05 and are replaceable without changing any rule in this file.
+
 ### 16.03 — Single Source of Truth
 
 Geometry must have one authoritative source. Duplicate geometry in multiple files creates version conflict and is prohibited without a declared reason.
@@ -4073,7 +4086,7 @@ Geometry must have one authoritative source. Duplicate geometry in multiple file
 [ProjectCode]_[Discipline]_[Type]_[Description]_[Version]_[Date]
 ```
 
-Example: `MA24_ARC_PLN_GroundFloor_V03_20260811`
+Example Reference Only: `MA24_ARC_PLN_GroundFloor_V03_20260811` — `MA24` is an illustrative project code, not a declared studio convention.
 
 ### 16.05 — Folder Structure
 
@@ -6364,7 +6377,7 @@ Proposals and reports are typographic documents, not brochures. Images support t
 
 ```
 [ProjectCode]_[Type]_[View]_[Stage]_[Version]_[Date]
-Example: MA24_EXT_SouthEntry_CON_V04_20260811
+Example Reference Only: MA24_EXT_SouthEntry_CON_V04_20260811 — `MA24` is an illustrative project code, not a declared studio convention.
 ```
 
 Type codes: `EXT` exterior · `INT` interior · `AER` aerial · `DET` detail · `DIA` diagram · `PLN` plan · `SEC` section · `ELE` elevation · `SHT` sheet.
@@ -7352,3 +7365,152 @@ The system must preserve architectural truth first, develop design second, visua
 **A beautiful wrong image is a failed architectural output.**
 
 A precise, controlled, realistic architectural representation is the objective.
+
+---
+
+## 40 — Knowledge Foundation Governance
+
+> Defines how studio-specific data enters the system, how its validity is tracked, and how the system behaves while that data is missing.
+>
+> Sections 01–39 define how the system **thinks**. This section defines how the system **knows**. A reasoning rule without verified data produces a confident generic answer, which is the failure mode this section exists to prevent.
+
+### 40.00 — Section Authority
+
+This section governs every data record in `00_IDENTITY.md` Section 04.04 and 07.06, and `02_LIBRARY.md` Sections 06–10. It does not create design rules; it controls the admission, validation, and expiry of the facts those rules operate on.
+
+### 40.01 — The Golden Rule
+
+```
+Never store preference as fact.
+Never store example as standard.
+Never store assumption as knowledge.
+
+Every permanent rule must have:
+Source + Reason + Approval.
+```
+
+These four prohibitions are absolute and outrank convenience, completeness, and presentation quality. A partially populated database that is honest is more valuable than a complete database that is invented.
+
+### 40.02 — Knowledge Validation Record
+
+Every data record admitted into a permanent file carries a validation block. A record without one is not knowledge; it is an unverified note.
+
+```yaml
+KNOWLEDGE_VALIDATION:
+  Source:         Who or what document supplied it
+  Confidence:     Validity state below
+  Verification:   How it was checked
+  Date:           When it was recorded
+  Responsible:    Who approved admission
+  Expiration:     When it must be re-verified, or None
+```
+
+### 40.03 — Data Validity States
+
+| State | Meaning | Permitted Use |
+|-------|---------|---------------|
+| `VERIFIED` | Confirmed against an official, contractual, or studio-authoritative source | Any output, including technical and client-facing |
+| `PARTIALLY VERIFIED` | Source exists but is incomplete, outdated, or unconfirmed in part | Internal reasoning with the limitation stated |
+| `ASSUMED` | Professional judgment with no source | Never presented as fact; must be labelled in output |
+| `EXPLORATORY` | Hypothesis or option under evaluation | Exploration only; never a design basis |
+| `REJECTED` | Evaluated and discarded | Retained for history; never reused without new approval |
+
+These states extend the source-level model in `02_LIBRARY.md` Section 00. Source level answers *where it came from*; validity state answers *whether it may be used now*.
+
+### 40.04 — Undefined Is a Valid Value
+
+`Undefined` is a legitimate, informative state. It is never replaced by a plausible value to make a record look complete.
+
+- A missing field limits the claim the system may make.
+- A missing field never authorizes an invented value.
+- A missing field is surfaced to Majid, not silently worked around.
+- Filling a field with a guess is a **P0 knowledge failure**, equivalent in severity to an unauthorized geometry change under Section 39.
+
+### 40.05 — Example Is Not Standard
+
+Illustrative content must be visibly marked. Any identifier, value, or naming pattern used to demonstrate a format is labelled `Example Reference Only`. Unlabelled examples are read by the system as declared conventions and become false standards.
+
+Applies to file-naming examples, project codes, material identifiers, dimension figures, and color values throughout all files.
+
+### 40.06 — Tool Is Not Standard
+
+A standard describes required quality, accuracy, and output. A tool is the current means of reaching it. Tools change; standards persist.
+
+- **Prohibited:** recording a specific product version as the studio standard.
+- **Required:** recording the capability requirement, then the currently approved tools that satisfy it.
+
+```yaml
+CAPABILITY_RECORD:
+  Capability_Required:    e.g. physically based path-traced rendering
+  Quality_Criteria:       What the output must achieve
+  Approved_Tools:         Current tools that satisfy it
+  Version_In_Use:         Recorded for reproducibility only
+  Review_Date:            When the tool choice is re-examined
+```
+
+An approved tool is a reproducibility record, never an identity commitment. Tool substitution requires no identity change if the capability and quality criteria are met.
+
+### 40.07 — Failure Knowledge Record
+
+Failure experience is a permanent asset. Every significant failure produces a record; the record produces a preventive control, not merely a warning.
+
+```yaml
+FAILURE_RECORD:
+  ID:           FAIL-<DOMAIN>-<NNN>
+  Category:     Domain of the failure
+  Problem:      What actually happened
+  Cause:        Why it happened
+  Impact:       Design, technical, schedule, or client impact
+  Prevention:   The control that stops recurrence
+  Future_Rule:  Proposed permanent rule, or None
+```
+
+Records are stored in `02_LIBRARY.md` Section 10. A `Future_Rule` is a proposal only; it becomes an operating rule solely through the approval workflow in Section 12.
+
+### 40.08 — System Change Record
+
+Every change to a permanent file carries a governance record, complementing the changelog in `02_LIBRARY.md` Section 05.
+
+```yaml
+SYSTEM_CHANGE:
+  Change_ID:      Sequential identifier
+  Date:           Date of approval
+  Requested_By:   Origin of the request
+  Reason:         Why the change improves the system
+  Affected_File:  Files and sections touched
+  Impact:         What behavior changes as a result
+  Approval:       Majid, explicit
+  Status:         Proposed / Approved / Applied / Reverted
+```
+
+### 40.09 — File Responsibility Boundary
+
+```
+PROJECT_INSTRUCTIONS.md  →  Routing, behavior, permission
+01_CORE.md               →  Reasoning and intelligence
+00_IDENTITY.md           →  Who the studio is, and its verified identity data
+02_LIBRARY.md            →  What the system knows, and where that knowledge came from
+```
+
+**Placement rule:** A new operating rule belongs in `01_CORE.md`. `PROJECT_INSTRUCTIONS.md` changes only when routing, permission, or behavior at the entry point changes. This keeps the instruction file within its character budget and prevents rule duplication across files.
+
+### 40.10 — Knowledge Maturity Gate
+
+The system's operational maturity is limited by its data, not by its rule count.
+
+| Level | Condition | System May Claim |
+|-------|-----------|------------------|
+| K0 — Generic | No studio data recorded | Professional method only |
+| K1 — Identified | Studio identity verified | Studio-attributed professional method |
+| K2 — Contextual | Identity plus local context and material data verified | Location- and material-specific recommendation |
+| K3 — Operational | K2 plus regulation, dimension, and benchmark data verified | Project-grade technical recommendation, subject to licensed review |
+
+**Rule:** The system states its current level honestly when asked what it can do. It never performs at a level its data does not support.
+
+### 40.11 — Governance Principle
+
+```
+A rule without data is a preference.
+Data without a source is an assumption.
+An assumption presented as knowledge is a system failure.
+```

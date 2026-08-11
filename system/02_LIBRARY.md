@@ -510,3 +510,456 @@ Recurring visual defects observed across projects, with their cause and the prev
 | 2026-08-11 | 00_IDENTITY.md | 04.03 | Added Foundational Operating Principles: Source Truth, Architectural Partner, Precision First | Identity-level anchor for the Core Evolution Patch | Majid — Core Evolution Patch v2.0 |
 | 2026-08-11 | 02_LIBRARY.md | 04.05, 04.06 | Added System Improvement Note Register and Visual Failure Pattern Archive | Store failure patterns and improvement notes as knowledge, not as operating rules | Majid — Core Evolution Patch v2.0 |
 | 2026-08-11 | PROJECT_INSTRUCTIONS.md | 01-10 | Restructured from instruction list to Project Operating Contract with 10 numbered modules: State Initialization, Source Authority, Decision State, Workflow Routing, Visual Task Contract, Edit Preservation, Output Permission, Quality Gate, Memory Update | Enforce state, lock, delta, and validation before any output reaches the Core | Majid — PROJECT_INSTRUCTIONS v2.0 |
+| 2026-08-11 | PROJECT_INSTRUCTIONS.md | 01-10 | Rebuilt as v3.0 Project Operating Contract: 12-state workflow machine, 5-step source conflict resolution, Edit Preservation A/B/C classification, output permission gate, ARCH VIZ quality fence | Scope PROJECT_INSTRUCTIONS to routing, behavior and permission only; move all new rules to 01_CORE.md | Majid — DR-25 |
+| 2026-08-11 | 01_CORE.md | 40 | Added Knowledge Foundation Governance (40.00-40.11): Golden Rule, Knowledge Validation Record, Data Validity States, Undefined Is a Valid Value, Example Is Not Standard, Tool Is Not Standard, Failure Knowledge Record, System Change Record, File Responsibility Boundary, Knowledge Maturity Gate K0-K3 | Govern the data layer before populating it; prevent assumption entering the system as knowledge | Majid — Data Foundation Build |
+| 2026-08-11 | 01_CORE.md | 12.09 | Added bilingual heading rule: Persian gloss permitted on headings as a reading aid, English text governs | Resolve Persian-content policy without weakening English-only core rule | Majid — DR-26 |
+| 2026-08-11 | 01_CORE.md | 16.02, 35.79 | Relabelled MA24 file-naming examples as Example Reference Only | Prevent an illustrative project code being treated as a declared studio convention | Majid — DR-13 |
+| 2026-08-11 | 00_IDENTITY.md | 04.04 | Added Studio Identity Database (04.04.01-04.04.08): Studio Profile, Scale, Service Architecture, Design Specialization, Geographic Identity, Declared Philosophy, Declared Language, Behavior Under Undefined Identity | Give identity a data structure; every field ships as Undefined rather than assumed | Majid — Data Foundation Build M01 |
+| 2026-08-11 | 00_IDENTITY.md | 07.06 | Added Visual Identity Data Records: Typography Record, Brand Color Record | Register typography and brand colour as pending studio decisions, not invented values | Majid — Data Foundation Build M06 |
+| 2026-08-11 | 02_LIBRARY.md | 06, 07 | Added Local Context Intelligence Database (four Mazandaran locations registered empty) and Material Intelligence Database with admission gate | Structure for context and material knowledge, with provenance required before use | Majid — Data Foundation Build M02, M03 |
+| 2026-08-11 | 02_LIBRARY.md | 08, 09, 10 | Added Regulation/Dimension/Benchmark Databases, Visualization Knowledge Database with numeric lighting profiles and capability-based tool records, and Failure Knowledge Database | Satisfy 01_CORE.md 40.07 reference; enforce versioned regulations, paired benchmarks, numeric lighting, and tool-as-capability | Majid — Data Foundation Build M04, M05, M07, M08, M09, M11 |
+| 2026-08-11 | INTAKE_LOG.md, docs/DEVELOPMENT_GOVERNANCE.md, LICENSE | ALL | Refreshed intake log as a placement ledger, published governance documentation, added MIT LICENSE file | Correct three stale or missing repository facts | Majid — DR-27 |
+
+---
+
+## 06 — Local Context Intelligence Database
+
+> Verified place data. This is the difference between a general architecture AI and a studio AI: a recommendation that knows its climate, its risks, and its local construction reality.
+>
+> Admission is governed by `01_CORE.md` Section 40. Every field is `Undefined` until Majid supplies a verified value. Section 03.07 defines the collection protocol; this section stores the results.
+
+### 06.01 — Location Record Schema
+
+```yaml
+LOCATION_PROFILE:
+  Location_ID:            LOC-<CITY>-<NNN>
+  City:
+  Province:
+  Country:
+  Climate_Type:
+  Geographical_Context:
+  Urban_Context:
+  Topography:
+  Population_Context:
+  Development_Pattern:
+  Validation:             See 01_CORE.md 40.02
+```
+
+### 06.02 — Climate Record Schema
+
+```yaml
+CLIMATE_PROFILE:
+  Location_ID:
+  Temperature:            Seasonal range, with source
+  Humidity:               Annual profile, not a single figure
+  Rainfall:               Volume and seasonal distribution
+  Solar_Condition:        Orientation consequences, cloud cover
+  Wind:                   Prevailing direction, seasonal intensity
+  Seasonal_Risks:
+  Environmental_Challenges:
+  Data_Source:            Meteorological authority and period
+  Validation:
+```
+
+**Rule:** Climate figures require a named source and a measurement period. A remembered impression of a climate is `ASSUMED`, never `VERIFIED`.
+
+### 06.03 — Regional Risk Record Schema
+
+```yaml
+RISK_PROFILE:
+  Location_ID:
+  Humidity_Risk:
+  Corrosion_Risk:
+  Water_Infiltration:
+  Biological_Growth:
+  Material_Aging:
+  Maintenance_Challenges:
+  Construction_Risks:
+  Observed_Evidence:      Project, building, or documented case
+  Validation:
+```
+
+### 06.04 — Design Implication Record Schema
+
+Risks become design guidance only through an explicit implication record. A risk list is not a strategy.
+
+```yaml
+DESIGN_IMPLICATIONS:
+  Location_ID:
+  Facade_Strategy:
+  Material_Strategy:
+  Ventilation_Strategy:
+  Shading_Strategy:
+  Landscape_Strategy:
+  Maintenance_Strategy:
+  Rejected_Solutions:     What has failed locally, and why
+  Validation:
+```
+
+`Rejected_Solutions` is as valuable as the recommendations. A locally failed solution that is not recorded will be proposed again.
+
+### 06.05 — Registered Locations
+
+Priority order for population, as directed: Babolsar, Babol, Ghaemshahr, Sari, then future target cities.
+
+| Location ID | City | Province | Climate record | Risk record | Implications | State |
+|-------------|------|----------|----------------|-------------|--------------|-------|
+| LOC-BABOLSAR-001 | Babolsar | Mazandaran | Undefined | Undefined | Undefined | `Undefined` |
+| LOC-BABOL-001 | Babol | Mazandaran | Undefined | Undefined | Undefined | `Undefined` |
+| LOC-GHAEMSHAHR-001 | Ghaemshahr | Mazandaran | Undefined | Undefined | Undefined | `Undefined` |
+| LOC-SARI-001 | Sari | Mazandaran | Undefined | Undefined | Undefined | `Undefined` |
+
+**Note on Mazandaran:** High humidity, heavy rainfall, biological growth, metal corrosion, shading importance, natural ventilation, and durable coating selection are the expected subject areas for these records. They are listed here as the **collection agenda**, not as recorded findings. No figure or recommendation enters the table above without a source.
+
+---
+
+## 07 — Material Intelligence Database
+
+> The system currently reasons well about materials but has no material to select from. This database closes that gap.
+>
+> One record per material. A material is admitted only with its climate behavior and its failure modes; a record listing only advantages is incomplete and is not admitted.
+
+### 07.01 — Material Identity Schema
+
+```yaml
+MATERIAL_RECORD:
+  Material_ID:      MAT-<CATEGORY>-<NNN>
+  Name:
+  Category:
+  Sub_Category:
+  Manufacturer:
+  Origin:
+  Application:
+  Local_Availability:
+  Cost_Level:
+  Validation:
+```
+
+### 07.02 — Technical Properties Schema
+
+```yaml
+TECHNICAL_PROPERTIES:
+  Material_ID:
+  Durability:
+  Water_Resistance:
+  UV_Resistance:
+  Thermal_Behavior:
+  Fire_Behavior:
+  Acoustic_Behavior:
+  Maintenance_Level:
+  Data_Source:      Manufacturer, standard, or studio observation
+  Validation:
+```
+
+Manufacturer performance claims are recorded as `PARTIALLY VERIFIED` until confirmed by a standard or studio experience.
+
+### 07.03 — Climate Compatibility Schema
+
+```yaml
+CLIMATE_RESPONSE:
+  Material_ID:
+  Suitable_Climate:
+  Unsuitable_Climate:
+  Humidity_Performance:
+  Salt_Air_Performance:
+  Aging_Behavior:
+  Cleaning_Requirement:
+  Evidence:             Observed case or documented source
+  Validation:
+```
+
+### 07.04 — Visual Character Schema
+
+```yaml
+VISUAL_CHARACTER:
+  Material_ID:
+  Texture:
+  Color_Range:
+  Light_Response:
+  Reflection:
+  Perceived_Quality:
+  Architectural_Message:
+  Reference_Images:       Benchmark IDs from Section 08
+  Validation:
+```
+
+This record feeds visualization directly. Material realism under `01_CORE.md` 39.08 depends on these values being real rather than imagined.
+
+### 07.05 — Application Rules Schema
+
+```yaml
+APPLICATION_RULES:
+  Material_ID:
+  Recommended_Usage:
+  Avoided_Usage:
+  Combination_With:
+  Detailing_Requirements:
+  Construction_Notes:
+  Known_Failures:           Linked FAILURE_RECORD IDs
+  Validation:
+```
+
+### 07.06 — Material Register
+
+| Material ID | Name | Category | Application | Climate suitability | State |
+|-------------|------|----------|-------------|---------------------|-------|
+| — | — | — | — | — | Register empty — awaiting Majid |
+
+**Category namespace** (identifier structure only, not a recorded inventory): `MAT-STONE`, `MAT-CONCRETE`, `MAT-METAL`, `MAT-WOOD`, `MAT-GLASS`, `MAT-CERAMIC`, `MAT-COMPOSITE`, `MAT-COATING`, `MAT-INSULATION`.
+
+**Admission gate:** A material enters the register only when 07.01, 07.03, and 07.05 are populated. Technical properties and visual character may follow. A material with no recorded failure mode or limitation is treated as an incomplete record.
+
+---
+
+## 08 — Regulation, Dimension and Benchmark Databases
+
+> Three verification-critical databases. Each carries a stricter admission gate than general knowledge, because an error here becomes a legal, safety, or quality failure rather than an aesthetic one.
+
+### 08.01 — Regulation Record Schema
+
+The system must never claim to "know the national building code". It knows specific, versioned, sourced records.
+
+```yaml
+REGULATION:
+  Regulation_ID:        REG-<COUNTRY>-<CODE>-<NN>
+  Name:
+  Category:
+  Authority:
+  Edition:
+  Year:
+  Region:
+  Scope:
+  Applicable_Projects:
+  Verification_Status:
+  Source:               Document reference or official link
+```
+
+**Status vocabulary:** `Verified` · `Needs Verification` · `Archived` · `Superseded`.
+
+**Absolute rule:** A regulation record without `Edition`, `Year`, `Authority`, and `Source` is `Needs Verification` and may never support a compliance statement. No legal conclusion is ever drawn from this Library alone; see Section 02.01.
+
+### 08.02 — Regulation Application Schema
+
+```yaml
+REGULATION_APPLICATION:
+  Regulation_ID:
+  Building_Type:
+  Relevant_Stage:
+  Design_Impact:
+  Checking_Method:
+  Responsible_Role:
+```
+
+### 08.03 — Municipal Rule Schema
+
+Municipal rules are jurisdiction-bound and are never generalized between cities.
+
+```yaml
+LOCAL_REGULATION:
+  Location_ID:              Links to Section 06
+  City:
+  Authority:
+  Document_Name:
+  Building_Height_Rules:
+  Setback_Rules:
+  Density:
+  Parking_Rules:
+  Facade_Rules:
+  Special_Limitations:
+  Verification_Date:
+  Source:
+```
+
+**Expiry rule:** A municipal record older than its `Verification_Date` review cycle drops to `Needs Verification` automatically. Local planning interpretation changes faster than national code.
+
+### 08.04 — Regulation Register
+
+| Regulation ID | Name | Authority | Edition | Year | Status |
+|---------------|------|-----------|---------|------|--------|
+| — | — | — | — | — | Register empty — awaiting Majid |
+
+Population target: the 22 official Mabahes referenced in Section 02.01, each as an individual record with its own edition and year. Until then, Section 02.01's warning governs.
+
+### 08.05 — Dimension Standard Schema
+
+```yaml
+DIMENSION:
+  Element:
+  Building_Type:
+  Minimum:
+  Recommended:
+  Maximum:
+  Reference:            Standard, code, or studio practice
+  Climate:
+  Notes:
+  Validation:
+```
+
+A dimension without `Reference` is a professional assumption and is labelled as such in every output, per Section 02.04.
+
+### 08.06 — Dimension Categories
+
+Collection agenda, not recorded values:
+
+| Group | Elements |
+|-------|----------|
+| Residential | Living, bedroom, kitchen, bathroom, corridor, stair, balcony, parking |
+| Public | Lobby, hall, service, accessibility |
+| Interior | Furniture clearance, lighting distance, ergonomic standards |
+
+### 08.07 — Visual Benchmark Schema
+
+Quality assurance without a benchmark is opinion. Each category requires at least one approved and one rejected example before its QA criteria are considered operational.
+
+```yaml
+BENCHMARK:
+  Benchmark_ID:         BM-<CATEGORY>-<NNN>
+  Category:
+  Image:                Path or reference
+  Status:               Approved / Rejected / Diagnostic
+  Why_Approved:
+  Why_Rejected:
+  Learning_Point:
+  Applicable_Project:
+  Rights_Status:
+  Validation:
+```
+
+This schema is the operational form of the template in Section 03.04 and uses the same category set.
+
+### 08.08 — Benchmark Coverage Register
+
+| Category | Approved example | Rejected example | Coverage |
+|----------|------------------|------------------|----------|
+| Architecture | Undefined | Undefined | `Undefined` |
+| Facade | Undefined | Undefined | `Undefined` |
+| Interior | Undefined | Undefined | `Undefined` |
+| Material | Undefined | Undefined | `Undefined` |
+| Glass | Undefined | Undefined | `Undefined` |
+| Lighting | Undefined | Undefined | `Undefined` |
+| Landscape | Undefined | Undefined | `Undefined` |
+| Presentation | Undefined | Undefined | `Undefined` |
+
+**Illustrative pairing** (`Example Reference Only`, per `01_CORE.md` 40.05): for Glass, an approved example shows clear glazing with controlled reflection; a rejected example shows artificial blue mirror glazing. This illustrates the *pairing method*; it is not a recorded benchmark.
+
+---
+
+## 09 — Visualization Knowledge Database
+
+> Converts visual intent into recorded, reproducible parameters. `01_CORE.md` Section 39 defines the quality rules; this section stores the values those rules operate on.
+
+### 09.01 — Lighting Profile Schema
+
+A named atmosphere is not a specification. "Golden hour" is a feeling; a lighting profile is a set of values that reproduces it.
+
+```yaml
+LIGHT_PROFILE:
+  Profile_ID:           LP-<NNN>
+  Name:
+  Type:
+  Sun_Position:         Angle above horizon
+  Time:
+  Color_Temperature:    Kelvin
+  Sky_Model:
+  Shadow_Character:
+  Contrast:
+  Exposure:             EV
+  Application:
+  Validation:
+```
+
+**Rule:** A lighting instruction referencing a named mood without a profile record is incomplete. The system requests the profile or states the values it is assuming.
+
+### 09.02 — Lighting Profile Register
+
+| Profile ID | Name | Sun position | Temperature | Contrast | Shadow | State |
+|------------|------|--------------|-------------|----------|--------|-------|
+| — | — | — | — | — | — | Register empty — awaiting Majid |
+
+### 09.03 — Production Pipeline Schema
+
+```yaml
+VISUAL_PIPELINE:
+  Modeling:
+  Rendering:
+  Post_Process:
+  AI_Enhancement:
+  Presentation:
+  Archive:
+  File_Exchange_Standard:
+```
+
+### 09.04 — Rendering Capability Record
+
+Recorded as a capability, never as a product commitment; see `01_CORE.md` 40.06.
+
+```yaml
+RENDER_CAPABILITY:
+  Capability_Required:      e.g. physically based path-traced rendering
+  Geometry_Accuracy:
+  Material_Accuracy:
+  Lighting_Accuracy:
+  Camera_Accuracy:
+  Atmosphere:
+  Resolution:
+  Quality_Level:
+  Approved_Tools:
+  Version_In_Use:
+  Review_Date:
+```
+
+### 09.05 — Visual Production Stack Register
+
+| Role | Capability requirement | Approved tool | Version | State |
+|------|------------------------|---------------|---------|-------|
+| Primary render engine | Undefined | Undefined | Undefined | `Undefined` |
+| Secondary engine | Undefined | Undefined | Undefined | `Undefined` |
+| 3D software | Undefined | Undefined | Undefined | `Undefined` |
+| AI tools | Undefined | Undefined | Undefined | `Undefined` |
+| Image processing | Undefined | Undefined | Undefined | `Undefined` |
+
+The general tool map in `01_CORE.md` 16.02 states tool *roles*. This register records the studio's actual confirmed tools and versions.
+
+---
+
+## 10 — Failure Knowledge Database
+
+> Error experience is an asset. A failure that is not recorded is a failure that will repeat.
+>
+> Schema and governance: `01_CORE.md` 40.07. This section stores the records. Section 04.06 holds the visual failure *patterns* observed across projects; this section holds *individual incidents* with their causes and controls.
+
+### 10.01 — Failure Record Schema
+
+```yaml
+FAILURE_RECORD:
+  ID:           FAIL-<DOMAIN>-<NNN>
+  Category:
+  Problem:      What actually happened
+  Cause:        Why it happened
+  Impact:       Design, technical, schedule, or client impact
+  Prevention:   The control that stops recurrence
+  Future_Rule:  Proposed permanent rule, or None
+  Date:
+  Validation:
+```
+
+**Domain codes:** `VIS` visualization · `GEO` geometry and source · `REG` regulation · `MAT` material · `COM` communication · `PRO` process · `SYS` system and data.
+
+### 10.02 — Failure Register
+
+| ID | Category | Problem | Cause | Prevention | Future rule |
+|----|----------|---------|-------|------------|-------------|
+| FAIL-VIS-001 | Image editing | AI changed building geometry during an edit | Missing source lock before production | Activate Edit Preservation Mode | Implemented — `01_CORE.md` 39.03, 39.05 |
+
+**Register state:** One record, supplied by Majid. The thirteen entries in Section 04.06 are generalized patterns derived from observation, not incident records, and are intentionally kept separate.
+
+### 10.03 — Failure to Rule Promotion
+
+A failure record does not become a rule by existing. Promotion requires:
+
+1. The cause is systemic, not a one-off circumstance.
+2. The preventive control is testable.
+3. The rule does not duplicate an existing rule in `01_CORE.md`.
+4. Majid approves it through the workflow in `01_CORE.md` Section 12.
+
+Until all four conditions are met, `Future_Rule` remains a proposal and the system does not act on it as policy.
