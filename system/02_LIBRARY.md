@@ -45,3 +45,5 @@ _What changed · why it changed · source of the change._
 | Date | File | Section | Change | Reason | Source |
 |---|---|---|---|---|---|
 | 2026-08-11 | all | — | Core files created (structure only) | Initialize permanent architecture | Majid |
+| 2026-08-11 | PROJECT_INSTRUCTIONS.md | all | Master operating instruction added (7,260 chars) | Define runtime behaviour of the Studio Director | Majid |
+| 2026-08-11 | 00_IDENTITY.md | 01–08 | Full identity layer populated verbatim | Establish WHO the studio is | Majid |
