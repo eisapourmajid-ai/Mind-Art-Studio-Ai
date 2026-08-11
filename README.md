@@ -14,10 +14,9 @@ system/
 │   └── UPDATE_PROPOSAL_TEMPLATE.md    # Required format for every proposed change
 ├── _intake/
 │   └── INTAKE_LOG.md                  # Verbatim buffer for incoming PARTS (temporary)
-└── (core files — created after "End of initial data")
-    ├── 00_IDENTITY.md                 # WHO the studio is
-    ├── 01_CORE.md                     # HOW the system thinks
-    └── 02_LIBRARY.md                  # WHAT the system has learned
+├── 00_IDENTITY.md                     # WHO the studio is
+├── 01_CORE.md                         # HOW the system thinks
+└── 02_LIBRARY.md                      # WHAT the system has learned
 ```
 
 ## Language rules
@@ -27,6 +26,7 @@ system/
 
 ## Current state
 
-Initial data collection is **open**. Per the Initial Data Collection Protocol
-(`system/PROTOCOL/00_DEVELOPMENT_DIRECTIVE.md` §4), the three core files are created
-only after Majid declares **"End of initial data"**.
+The three core files exist as empty structures. Content is being dictated by Majid
+item by item; each item is inserted into its target section exactly as given.
+Full system analysis (classification review, contradiction detection, optimization)
+runs afterwards.
